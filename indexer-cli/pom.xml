@@ -21,7 +21,7 @@ under the License.
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.apache.maven.indexer</groupId>
+    <groupId>org.jboss.windup.org.apache.maven.indexer</groupId>
     <artifactId>maven-indexer</artifactId>
     <version>6.0-SNAPSHOT</version>
   </parent>
@@ -33,7 +33,7 @@ under the License.
     Indexer CLI produces a CLI tool for indexing and publishing Maven repositories.
   </description>
 
-  <!-- IMPORTANT! * WHEN YOU CHANGE DEPS MAKE SURE TO UPDATE SHADE CONFIG! * DON'T FORGET OTHERWISE YOU ARE RENDERING CLI 
+  <!-- IMPORTANT! * WHEN YOU CHANGE DEPS MAKE SURE TO UPDATE SHADE CONFIG! * DON'T FORGET OTHERWISE YOU ARE RENDERING CLI
     UNWORKABLE! -->
 
   <dependencies>
