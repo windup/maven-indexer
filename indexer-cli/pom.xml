@@ -39,7 +39,7 @@ under the License.
   <dependencies>
     <!-- The indexer -->
     <dependency>
-      <groupId>org.apache.maven.indexer</groupId>
+      <groupId>org.jboss.windup.org.apache.maven.indexer</groupId>
       <artifactId>indexer-core</artifactId>
       <version>${project.version}</version>
     </dependency>
