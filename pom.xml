@@ -76,8 +76,17 @@ under the License.
     <archetype.version>2.2</archetype.version>
     <wagon.version>2.3</wagon.version>
 
-    <maven.site.path>maven-indexer-archives/maven-indexer-LATEST</maven.site.path>
+    <windup.scm.connection>scm:git:https://github.com/windup/maven-indexer.git</windup.scm.connection>
+    <windup.developer.connection>scm:git:git@github.com:windup/maven-indexer.git</windup.developer.connection>
+    <windup.scm.url>http://github.com/windup/maven-indexer</windup.scm.url>
+
   </properties>
+  <scm>
+    <tag>master</tag>
+    <connection>${windup.scm.connection}</connection>
+    <developerConnection>${windup.developer.connection}</developerConnection>
+    <url>${windup.scm.url}</url>
+  </scm>
 
   <dependencyManagement>
     <dependencies>
@@ -420,19 +429,6 @@ under the License.
           <version>2.17</version>
         </plugin>
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.3</version>
-          <configuration>
-            <topSiteURL>scm:svn:https://svn.apache.org/repos/infra/websites/production/maven/content/${maven.site.path}</topSiteURL>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-scm-publish-plugin</artifactId>
-          <version>1.1</version>
-        </plugin>
-        <plugin>
           <groupId>org.apache.rat</groupId>
           <artifactId>apache-rat-plugin</artifactId>
           <configuration>
@@ -482,7 +478,4 @@ under the License.
     </plugins>
   </reporting>
 
-  <scm>
-    <tag>7.0.WINDUP</tag>
-  </scm>
 </project>
