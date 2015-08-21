@@ -22,9 +22,9 @@ under the License.
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.apache.maven</groupId>
-    <artifactId>maven-parent</artifactId>
-    <version>24</version>
+    <groupId>org.jboss</groupId>
+    <artifactId>jboss-parent</artifactId>
+    <version>16</version>
   </parent>
 
   <groupId>org.jboss.windup.org.apache.maven.indexer</groupId>
@@ -60,27 +60,6 @@ under the License.
       <timezone>-5</timezone>
     </contributor>
   </contributors>
-
-  <scm>
-    <connection>scm:git:https://git-wip-us.apache.org/repos/asf/maven-indexer.git</connection>
-    <developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/maven-indexer.git</developerConnection>
-    <url>https://github.com/apache/maven-indexer</url>
-  </scm>
-
-  <issueManagement>
-    <system>jira</system>
-    <url>http://jira.codehaus.org/browse/MINDEXER</url>
-  </issueManagement>
-  <ciManagement>
-    <system>Jenkins</system>
-    <url>https://builds.apache.org/job/maven-indexer/</url>
-  </ciManagement>
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/maven/content/${maven.site.path}</url>
-    </site>
-  </distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -407,26 +386,6 @@ under the License.
             <goals>
               <goal>check</goal>
             </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin><!-- TODO remove when upgrading to maven-parent 25 -->
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>enforce-bytecode-version</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <enforceBytecodeVersion>
-                  <maxJdkVersion>${maven.compiler.target}</maxJdkVersion>
-                </enforceBytecodeVersion>
-              </rules>
-              <fail>true</fail>
-            </configuration>
           </execution>
         </executions>
       </plugin>
