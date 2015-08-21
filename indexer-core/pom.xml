@@ -28,7 +28,6 @@ under the License.
   </parent>
 
   <artifactId>indexer-core</artifactId>
-  <version>6.0.WINDUP</version>
 
   <name>Maven :: Indexer Core</name>
   <description>
